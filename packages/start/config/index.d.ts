@@ -22,7 +22,7 @@ type SolidStartInlineConfig = {
   }
   vite?:
     | ViteCustomizableConfig
-    | ((options: { router: "server" | "client" | "server-function" }) => ViteCustomizableConfig);
+    | ((options: { router: "server" | "client" | "server-function" }) => ViteCustomizableConfig | void);
 };
 
 export declare function defineConfig(baseConfig?: SolidStartInlineConfig): ReturnType<typeof createApp>;
